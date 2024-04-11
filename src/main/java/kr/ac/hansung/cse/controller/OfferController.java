@@ -39,7 +39,7 @@ public class OfferController {
     public String doCreate(Model model, @Valid Offer offer, BindingResult result) {
         //검증한 결과를 result에 넣음.
 
-        if(result.hasErrors()) {
+        if(result.hasErrors()) { //검증.
             System.out.println("== Form data dose not validated ==");
 
             List<ObjectError> errors = result.getAllErrors();
